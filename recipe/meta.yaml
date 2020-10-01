@@ -20,7 +20,7 @@ requirements:
     - pip
   run:
     - python
-    - importlib-metadata >=1.7.0, <2.0.0  # [py<38]
+    - importlib-metadata >=2.0.0, <3.0.0  # [py<38]
 
 test:
   imports:
