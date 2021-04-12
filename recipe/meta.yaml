@@ -16,8 +16,8 @@ build:
 requirements:
   host:
     - python
-    - poetry
     - pip
+    - poetry-core >=1.0.0
   run:
     - python
     - importlib-metadata >=3.0.0, <4.0.0  # [py<38]
