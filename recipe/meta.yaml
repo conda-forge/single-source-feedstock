@@ -1,5 +1,5 @@
 {% set name = "single-source" %}
-{% set version = "0.1.3" %}
+{% set version = "0.1.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,16 +7,16 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d34e787db682a999a4004b89c659ad9d7b32f51c3ea739dc7dfed4c7378fb96e
+  sha256: 61b5c04e558fa73ac725b9fbdfb24027845533d99ca72e225efd5810dc261483
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - python
-    - poetry
+    - poetry-core >=1.0.0
     - pip
   run:
     - python
