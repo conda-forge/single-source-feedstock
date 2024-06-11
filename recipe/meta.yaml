@@ -1,16 +1,16 @@
 {% set name = "single-source" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b12705af958ca99d56ea9ce40bd9cc749378f4fe7ad03b1f9067e29daceef27d
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 7917aa113bda60072f01952e2966cd7247f0ec16fe52a1555f3c066b553e98b4
 
 build:
-  number: 3
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
